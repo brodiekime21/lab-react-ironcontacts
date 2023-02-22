@@ -14,9 +14,13 @@ const ContactList = ({data}) => {
     
     const addContact = () =>{
 
-        let remaining = data.filter((contact)=>{
-            return !contacts.some((remainingContact)=> remainingContact.id === contact.id)
-        })
+        // let remaining = data.filter((contact)=>{
+        //     return !contacts.some((remainingContact)=> remainingContact.id === contact.id)
+        // })
+
+        let remaining = data.filter((contact) => {
+            return !contacts.includes(contact)}
+        )
         
         if(remaining.length === 0){
             return
